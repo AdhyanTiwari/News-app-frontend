@@ -1,0 +1,89 @@
+.signin {
+    display: block;
+}
+
+h1,h2,h3 {
+    text-align: center;
+}
+
+label {
+    font-weight: 500;
+}
+
+.sContainer {
+    display: inline-block;
+    border: white 2px solid;
+    padding: 1rem;
+    width: 25rem;
+    border-radius: 2rem;
+    background-color: white;
+    color: black;
+}
+
+.dContainer {
+    display:flex;
+    flex-direction: column;
+    padding: 2.5rem;
+    width: 35rem;
+    /* background-color: white;
+    color: black; */
+    padding-top: 6rem;
+
+}
+
+.input_component {
+
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+}
+
+.input_component input {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid rgb(227, 227, 227);
+    outline: none;
+    padding: 2px;
+
+}
+
+.sbtn {
+    width: 100%;
+}
+
+.input_btn {
+    padding-top: 0.75rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:nowrap;
+}
+.dContainer p{
+    padding: 2rem;
+    text-align: center;
+    /* letter-spacing: 0.75px;
+    word-spacing: 1.5px; */
+    font-size: large;
+}
+h1{
+    letter-spacing: 2px;
+}
+.siContainer {
+    display: block;
+    border: white 2px solid;
+    padding: 1rem;
+    width: 25rem;
+    border-radius: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+    background-color: white;
+    color: black;
+}
