@@ -38,6 +38,17 @@ function Navbar() {
                                 <li><Link className="dropdown-item" to={"/technology"}>Technology</Link></li>
                             </ul>
                         </li>
+                        <li className="nav-item dropdown">
+                            <div className="nav-link dropdown-toggle" to={"/"} role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Channels
+                            </div>
+                            <ul className="dropdown-menu">
+                                <li><Link className="dropdown-item" to={"/aajtak"}>Aaj Tak</Link></li>
+                                <li><Link className="dropdown-item" to={"/zeenews"}>Zee News</Link></li>
+                                <li><Link className="dropdown-item" to={"/bbcnews"}>BBC News</Link></li>
+                                <li><Link className="dropdown-item" to={"/abcnews"}>ABC News</Link></li>
+                            </ul>
+                        </li>
                         <li className="nav-item">
                             <Link className="nav-link active" aria-current="page" to={"/saved"}>Saved</Link>
                         </li>

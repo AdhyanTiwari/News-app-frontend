@@ -2,18 +2,30 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import newscontext from '../contexts/newscontext';
 import "./css/sign.css"
+import Alert from './Alert';
 function SignUp() {
   const a = useContext(newscontext)
   const [user, setuser] = useState({ name: "", email: "", password: "", cPassword: "" });
+  const [status, setstatus] = useState(false)
   const onChange = (e) => {
     setuser({ ...user, [e.target.name]: e.target.value })
   }
   const onSubmit = (e) => {
     e.preventDefault();
-    a.signUp(user);
+    if (user.password === user.cPassword) {
+      a.signUp(user);
+    }
+    else {
+      setstatus(true);
+      setTimeout(() => {
+        setstatus(false);
+      }, 2000);
+    }
   }
   return (
     <div className='container'>
+      {a.login.status ? <Alert msg={a.login.msg} color={a.login.color} /> : ""}
+      {status ? <Alert msg={"password and confirm password are not same"} color={"danger"} /> : ""}
       <div className='box'>
         <div className='dContainer'>
           <h1>Welcome to A-NEWS</h1>

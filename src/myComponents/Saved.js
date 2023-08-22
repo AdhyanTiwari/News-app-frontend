@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import newscontext from '../contexts/newscontext';
 import Alert from './Alert';
+import { Link } from 'react-router-dom';
 
 function Saved() {
   const a = useContext(newscontext);
@@ -8,7 +9,7 @@ function Saved() {
   useEffect(() => {
     a.getNews();
   }, [])
-const [alert, setalert] = useState(false)
+  const [alert, setalert] = useState(false)
   const onclick = (e, event) => {
     event.preventDefault();
     a.deleteNews(e);
@@ -20,8 +21,9 @@ const [alert, setalert] = useState(false)
 
   return (
     <>
-    {alert?<Alert msg={"Successfully Deleted!"} color={"danger"} />:""}
+      {alert ? <Alert msg={"Successfully Deleted!"} color={"danger"} /> : ""}
       <div className='container' style={{ marginTop: "1rem", height: "2rem" }}>
+        <Link to={"/savedvideos"}> <button className='btn btn-outline-light btn-sm fixed-right'>Saved Videos</button></Link>
         <h1 className='text-center'>Saved News</h1>
         <div className="row my-4">
           {a.news.length === 0 ? <> <br /><h3 className="text-center">No Saved News, save your favourite news here</h3></> : ""}

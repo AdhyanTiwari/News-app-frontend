@@ -7,7 +7,11 @@ function Newsstate(props) {
     const [news, setnews] = useState([]);
     let status = localStorage.getItem("status");
     const [profile, setprofile] = useState(status === "true" ? true : false);
-    const [cPassword, setcPassword] = useState({ msg: "", status: false, color: "success" })
+    const [cPassword, setcPassword] = useState({ msg: "", status: false, color: "success" });
+    const [signin, setsignin] = useState({ msg: "", status: false, color: "success" });
+    const [login, setlogin] = useState({ msg: "", status: false, color: "success" });
+    const [video, setvideo] = useState([])
+
 
     //GET NEWS
     const getNews = async () => {
@@ -76,6 +80,10 @@ function Newsstate(props) {
         localStorage.setItem("token", json.token);
         localStorage.setItem("status", json.status)
         setprofile(json.status ? true : false);
+        setlogin({ msg: json.msg, color: (json.status ? "success" : "danger"), status: true });
+        setTimeout(() => {
+            setlogin({ ...login, [status]: false })
+        }, 2000);
         (json.status ? navigate("/") : navigate("/signup"))
     }
 
@@ -94,6 +102,10 @@ function Newsstate(props) {
         localStorage.setItem("token", json.token);
         localStorage.setItem("status", json.status);
         setprofile(json.status ? true : false);
+        setsignin({ msg: json.msg, color: (json.status ? "success" : "danger"), status: true });
+        setTimeout(() => {
+            setsignin({ ...signin, [status]: false })
+        }, 2000);
         (json.status ? navigate("/") : navigate("/signin"))
     }
 
@@ -117,12 +129,66 @@ function Newsstate(props) {
         setTimeout(() => {
             setcPassword({ ...cPassword, [status]: false })
         }, 2000);
-        console.log(cPassword);
         (json.status ? navigate("/") : navigate("/changepassword"))
     }
 
+    //GET VIDEOS
+    const getVideos = async () => {
+        if (status === "true") {
+            const response = await fetch("http://localhost:5000/api/videos/getvideos", {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    "auth-token": localStorage.getItem("token")
+                }
+            })
+            const json = await response.json();
+            console.log(json);
+            setvideo(json)
+        }
+        else {
+            navigate("/signup")
+        }
+    }
+
+
+    //ADD VIDEOS
+    const addVideos = async (e) => {
+        if (status === "true") {
+            let data = e;
+            const response = await fetch("http://localhost:5000/api/videos/addvideo", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "auth-token": localStorage.getItem("token")
+                },
+                body: JSON.stringify(data)
+            })
+            const json = await response.json();
+            getVideos();
+        }
+        else {
+            navigate("/signup")
+        }
+    }
+
+    //DELETE VIDEO
+    const deleteVideos = async (id) => {
+        let data = { id: id };
+        const response = await fetch("http://localhost:5000/api/videos/deletevideo", {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+                "auth-token": localStorage.getItem("token")
+            },
+            body: JSON.stringify(data)
+        })
+        const json = await response.json();
+        getVideos();
+    }
+
     return (
-        <newscontext.Provider value={{ news, getNews, addNews, deleteNews, signUp, signIn, profile, setprofile, cPassword, change_password, setcPassword }}>
+        <newscontext.Provider value={{ news, getNews, addNews, deleteNews, signUp, signIn, profile, setprofile, cPassword, change_password, setcPassword, signin, login, video, getVideos, addVideos,deleteVideos}}>
             {props.children}
         </newscontext.Provider>
     )

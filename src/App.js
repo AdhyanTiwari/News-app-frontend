@@ -10,6 +10,8 @@ import SignUp from "./myComponents/SignUp"
 import Newsstate from "./contexts/Newsstate";
 import Alert from "./myComponents/Alert";
 import Change_password from "./myComponents/Change_password";
+import YoutubeFeed from "./myComponents/Youtube";
+import Saved_Videos from "./myComponents/Saved_Videos";
 
 function App() {
   return (
@@ -59,6 +61,11 @@ function App() {
           ></Route>
           <Route
             exact
+            path="/savedvideos"
+            element={<Saved_Videos/>}
+          ></Route>
+          <Route
+            exact
             path="/changepassword"
             element={<Change_password/>}
           ></Route>
@@ -71,6 +78,26 @@ function App() {
             exact
             path="/signup"
             element={<SignUp/>}
+          ></Route>
+          <Route
+            exact
+            path="/aajtak"
+            element={<YoutubeFeed channelId={"UCt4t-jeY85JegMlZ-E5UWtA"} channel={"Aaj Tak"}  key={"Aaj Tak"}/>}
+          ></Route>
+          <Route
+            exact
+            path="/zeenews"
+            element={<YoutubeFeed channelId={"UCIvaYmXn910QMdemBG3v1pQ"} channel={"Zee News"} key={"Zee News"}/>}
+          ></Route>
+          <Route
+            exact
+            path="/bbcnews"
+            element={<YoutubeFeed channelId={"UC16niRr50-MSBwiO3YDb3RA"} channel={"BBC News"} key={"BBC News"}/>}
+          ></Route>
+          <Route
+            exact
+            path="/abcnews"
+            element={<YoutubeFeed channelId={"UCBi2mrWuNuyYy4gbM6fU18Q"} channel={"ABC News"} key={"ABC News"}/>}
           ></Route>
       </Routes>
       </Newsstate>

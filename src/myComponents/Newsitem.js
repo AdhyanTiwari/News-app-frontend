@@ -79,7 +79,6 @@ function Newsitem({ category }) {
                                                         visit website
                                                     </a>
                                                     <a className='mx-2' href="#"><i class="fa-solid fa-bookmark" onClick={(event) => { onclick(e, event) }}></i></a>
-                                                    <a className='mx-2' href="#" ><i class="fa-solid fa-book-open" onClick={(event) => { modal(event, e) }} ></i></a>
                                                 </div>
                                             </div>
                                         </div>
