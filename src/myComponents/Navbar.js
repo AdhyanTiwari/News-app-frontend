@@ -25,7 +25,7 @@ function Navbar() {
                     <li className="nav-item">
                             <Link className="nav-link active" aria-current="page" to={"/"}>Home</Link>
                         </li>
-                        <li className="nav-item dropdown">
+                        {/* <li className="nav-item dropdown">
                             <div className="nav-link dropdown-toggle" to={"/"} role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Categories
                             </div>
@@ -38,7 +38,7 @@ function Navbar() {
                                 <li><Link className="dropdown-item" to={"/technology"}>Technology</Link></li>
         
                             </ul>
-                        </li>
+                        </li> */}
                         <li className="nav-item dropdown">
                             <div className="nav-link dropdown-toggle" to={"/"} role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Channels
