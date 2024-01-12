@@ -9,16 +9,22 @@ body {
   color: white;
 }
 
+@media only screen and (max-width: 600px) {
+  body {
+    margin: 1px;
+  }
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-i{
+i {
   color: black;
 }
-i:hover
-{
+
+i:hover {
   cursor: pointer;
   color: rgba(0, 0, 0, 0.737);
 }
@@ -31,13 +37,13 @@ i:hover
 /* Track */
 ::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.815);
-  border-radius:5px;
+  border-radius: 5px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background:rgb(167, 166, 166);
-  border-radius:5px;
+  background: rgb(167, 166, 166);
+  border-radius: 5px;
 }
 
 /* Handle on hover */
