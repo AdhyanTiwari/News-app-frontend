@@ -51,12 +51,12 @@ const YoutubeFeed = (props) => {
                         <>
                             <div className="col-md-4" >
                                 <div className="card mb-3">
-                                    <div class="ratio ratio-16x9  ">
+                                    <div className="ratio ratio-16x9  ">
                                         <iframe src={`https://www.youtube.com/embed/${video.id.videoId}?rel=0`} title={video.snippet.title} allowfullscreen></iframe>
                                     </div>
                                     <div className="card-body">
                                         <h6>{video.snippet.title}</h6>
-                                        <a className='mx-2' href="#"><i class="fa-solid fa-bookmark" onClick={(e) => { onclick(video.id.videoId, video.snippet.title, e) }}></i></a>
+                                        <a className='mx-2' href="#"><i className="fa-solid fa-bookmark" onClick={(e) => { onclick(video.id.videoId, video.snippet.title, e) }}></i></a>
                                     </div>
                                 </div>
                             </div>

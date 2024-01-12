@@ -4,14 +4,13 @@ import Navbar from './myComponents/Navbar';
 import News from './myComponents/News';
 import Home from "./myComponents/Home";
 import Saved from "./myComponents/Saved";
-import About from "./myComponents/About";
 import Signin from "./myComponents/Signin";
 import SignUp from "./myComponents/SignUp"
 import Newsstate from "./contexts/Newsstate";
-import Alert from "./myComponents/Alert";
 import Change_password from "./myComponents/Change_password";
 import YoutubeFeed from "./myComponents/Youtube";
 import Saved_Videos from "./myComponents/Saved_Videos";
+import Discussion from "./myComponents/Discussion";
 
 function App() {
   return (
@@ -98,6 +97,11 @@ function App() {
             exact
             path="/abcnews"
             element={<YoutubeFeed channelId={"UCBi2mrWuNuyYy4gbM6fU18Q"} channel={"ABC News"} key={"ABC News"}/>}
+          ></Route>
+           <Route
+            exact
+            path="/discussion"
+            element={<Discussion/>}
           ></Route>
       </Routes>
       </Newsstate>

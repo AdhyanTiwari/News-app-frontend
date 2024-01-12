@@ -17,7 +17,7 @@ function Signin() {
   return (
     <div >
       {a.signin.status ? <Alert msg={a.signin.msg} color={a.signin.color} /> : ""}
-      <h1>Welcome to A-NEWS</h1>
+      <h1>Welcome to NEWSIFY</h1>
       <div className='siContainer'>
         <h3>Sign In!</h3>
         <form className='signin' onSubmit={signin}>

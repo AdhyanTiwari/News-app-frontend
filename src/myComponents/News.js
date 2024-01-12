@@ -9,7 +9,7 @@ function News(props) {
 
     return (
         <div className='container' style={{ marginTop: "1rem", height: "2rem" }}>
-            <h1 className='text-center'>A-News Latest {props.category} Headline</h1>
+            <h1 className='text-center'>Newsify Latest {props.category} Headline</h1>
 
             <Newsitem category={props.category} />
         </div>

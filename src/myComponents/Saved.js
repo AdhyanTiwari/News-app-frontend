@@ -46,7 +46,7 @@ function Saved() {
                     <a href={e.url} type="button" className="btn btn-dark btn-sm">
                       Read More
                     </a>
-                    <a className='mx-3' href="#"><i class="fa-solid fa-trash" onClick={(event) => { onclick(e._id, event) }}></i></a>
+                    <a className='mx-3' href="#"><i className="fa-solid fa-trash" onClick={(event) => { onclick(e._id, event) }}></i></a>
                   </div>
                 </div>
               </div>

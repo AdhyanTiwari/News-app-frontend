@@ -31,17 +31,7 @@ function Newsitem({ category }) {
     useEffect(() => {
         fetchData();
     }, [category])
-    const [article, setarticle] = useState({
-        content: "",
-        title: "",
-        urlToImage: "",
-        url: "",
-    })
-
-    const modal = (event, e) => {
-        event.preventDefault();
-        setarticle(e);
-    }
+  
     return (
         <>
         
@@ -78,7 +68,7 @@ function Newsitem({ category }) {
                                                     <a href={e.url} type="button" className="btn btn-dark btn-sm mx-1">
                                                         visit website
                                                     </a>
-                                                    <a className='mx-2' href="#"><i class="fa-solid fa-bookmark" onClick={(event) => { onclick(e, event) }}></i></a>
+                                                    <a className='mx-2' href="#"><i className="fa-solid fa-bookmark" onClick={(event) => { onclick(e, event) }}></i></a>
                                                 </div>
                                             </div>
                                         </div>

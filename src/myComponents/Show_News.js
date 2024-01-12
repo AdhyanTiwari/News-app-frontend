@@ -2,8 +2,8 @@ import React from 'react'
 
 function Show_News({ e }) {
     return (
-        <div class="modal fade" aria-labelledby="exampleModalLabel" aria-hidden="true" id="exampleModal" >
-            <div class="modal-content">
+        <div className="modal fade" aria-labelledby="exampleModalLabel" aria-hidden="true" id="exampleModal" >
+            <div className="modal-content">
                 <div className='container' style={{width:"5rem"}}>
                     <img src={e.urlToImage
                         ? e.urlToImage

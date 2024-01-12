@@ -28,7 +28,7 @@ function SignUp() {
       {status ? <Alert msg={"password and confirm password are not same"} color={"danger"} /> : ""}
       <div className='box'>
         <div className='dContainer'>
-          <h1>Welcome to A-NEWS</h1>
+          <h1>Welcome to NEWSIFY</h1>
           <p>
             Here you can sign up to personalize your feed by having access to saved NEWS that you can later read or can refer to in the future for your research <br /> <br />
           </p>

@@ -13,7 +13,7 @@ function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top" data-bs-theme="dark">
             <div className="container-fluid">
-                <div className="navbar-brand d-flex" href="#"><b>A-News</b>  &nbsp; &nbsp;
+                <div className="navbar-brand d-flex" href="#"><b>Newsify</b>  &nbsp; &nbsp;
                     <div style={{ border: "1px solid white", minHeight: "70%", }}></div>
                 </div>
 
@@ -36,6 +36,7 @@ function Navbar() {
                                 <li><Link className="dropdown-item" to={"/science"}>Science</Link></li>
                                 <li><Link className="dropdown-item" to={"/entertainment"}>Entertainment</Link></li>
                                 <li><Link className="dropdown-item" to={"/technology"}>Technology</Link></li>
+        
                             </ul>
                         </li>
                         <li className="nav-item dropdown">
@@ -52,12 +53,15 @@ function Navbar() {
                         <li className="nav-item">
                             <Link className="nav-link active" aria-current="page" to={"/saved"}>Saved</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link className="nav-link active" aria-current="page" to={"/discussion"}>Discussion</Link>
+                        </li>
                     </ul>
                     <div className=" mx-3" style={(!a.profile ? { display: "none" } : {})} role="search">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item dropdown">
                                 <button className="btn btn-success  rounded-circle" role="button" data-bs-toggle="dropdown" aria-expanded="true">
-                                    {/* <i class="fa-solid fa-user"></i> */}
+                                    {/* <i className="fa-solid fa-user"></i> */}
                                     <b>A</b>
                                 </button>
                                 <ul className="dropdown-menu dropdown-menu-end">

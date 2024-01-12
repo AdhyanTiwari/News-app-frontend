@@ -30,7 +30,7 @@ function Change_password() {
       {a.cPassword.status ? <Alert msg={a.cPassword.msg} color={a.cPassword.color} /> : ""}
       <h1>Change your password</h1>
       <div className='siContainer'>
-        <h3>Sign In!</h3>
+        <h3>Change Password!</h3>
         <form className='signin' onSubmit={signin}>
 
           <div className="input_component">
