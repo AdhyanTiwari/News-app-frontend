@@ -53,9 +53,6 @@ function Navbar() {
                         <li className="nav-item">
                             <Link className="nav-link active" aria-current="page" to={"/saved"}>Saved</Link>
                         </li>
-                        <li className="nav-item">
-                            <Link className="nav-link active" aria-current="page" to={"/discussion"}>Discussion</Link>
-                        </li>
                     </ul>
                     <div className=" mx-3" style={(!a.profile ? { display: "none" } : {})} role="search">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">

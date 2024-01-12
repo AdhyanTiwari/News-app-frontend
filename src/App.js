@@ -98,11 +98,6 @@ function App() {
             path="/abcnews"
             element={<YoutubeFeed channelId={"UCBi2mrWuNuyYy4gbM6fU18Q"} channel={"ABC News"} key={"ABC News"}/>}
           ></Route>
-           <Route
-            exact
-            path="/discussion"
-            element={<Discussion/>}
-          ></Route>
       </Routes>
       </Newsstate>
     </>
